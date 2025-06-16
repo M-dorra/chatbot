@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicio - Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #d32f2f;
+      --bg: #fffaf6;
+      --text: #333;
+      --muted: #777;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .menu-item {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-6px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-content {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .menu-content h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .menu-content p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Delicio</h1>
+    <p>Fresh & Tasty, Straight from the Kitchen</p>
+  </header>
+
+  <main>
+    <section class="menu" aria-label="Our Menu">
+      <div class="menu-item">
+        <!-- https://www.istockphoto.com/ -->
+       <img src="https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=" alt="Burger">
+
+        <div class="menu-content">
+          <h2>Burger</h2>
+          <p>Juicy grilled beef with fresh lettuce and signature sauce.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/1443993866/photo/french-fries-with-ketchup-and-cocktail-sauce.jpg?s=612x612&w=0&k=20&c=URpOsc5tds8tOfxK4ZO3Tkx6mwLho7fL_pTBSNdziBU=" alt="Fries" />
+        <div class="menu-content">
+          <h2>Fries</h2>
+          <p>Golden, crispy fries made from fresh potatoes.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=" alt="Pizza" />
+        <div class="menu-content">
+          <h2>Pizza</h2>
+          <p>Oven-baked pizza with rich toppings and gooey cheese.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/619637254/photo/two-fresh-submarine-sandwiches.jpg?s=612x612&w=0&k=20&c=5WtuqMq6eYFognGqc7wkGUspHxcKNWr-rV2rkAegM7g=" alt="Sandwich" />
+        <div class="menu-content">
+          <h2>Sandwich</h2>
+          <p>Classic sandwich with layers of meat, cheese, and veggies.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/180820338/photo/fresh-homemade-donuts-with-various-toppings.jpg?s=612x612&w=0&k=20&c=KxfUFMAvTphFQqnVCs7k9WeZj2wA_uANZgFgWvKlC2g=" alt="Donut" />
+        <div class="menu-content">
+          <h2>Donut</h2>
+          <p>Soft, sweet, and glazed to perfection.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/613059424/photo/cola-splash.jpg?s=612x612&w=0&k=20&c=TblckIblENoCbPz6HeXKJZ00hhbkLfAqderu-_olBqM=" alt="Coke" />
+        <div class="menu-content">
+          <h2>Coke</h2>
+          <p>Refreshing cold beverage to go with your meal.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.istockphoto.com/id/953712584/photo/mojito-cocktail.jpg?s=612x612&w=0&k=20&c=49iVyh41oCmtYMLx6xhRGw_Lz8IkEtMLRHOTSVW7mY8=" alt="Sprite" />
+        <div class="menu-content">
+          <h2>Sprite</h2>
+          <p>Crisp and lemony — the perfect thirst quencher.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Delicio Restaurant. All rights reserved.</p>
+  </footer>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="BMO-chatbot"
+  agent-id="992940e0-c637-46c6-9753-0e568a76c047"
+  language-code="en"
+></df-messenger>
+</body>
+</html>
