@@ -1,7 +1,6 @@
-# 🍔 Food Order Chatbot Backend with FastAPI
+# 🍔 Food Order Chatbot
 
-This is a backend project built using **FastAPI** to support a Dialogflow-based chatbot for food ordering. It enables users to add, remove, track, and complete food orders through natural language.
-
+This is a full-stack food ordering chatbot powered by Dialogflow, a FastAPI backend, and a frontend HTML page for integration. The chatbot helps users order food using natural language, with backend logic to manage orders, connect to a MySQL database, and respond dynamically to user inputs.
 ## 🚀 Features
 
 - Add food items with quantity to an order
@@ -28,11 +27,18 @@ This is a backend project built using **FastAPI** to support a Dialogflow-based 
 - FastAPI
 - Uvicorn
 - mysql-connector-python
-
+- Ngrok (for HTTPS tunneling to Dialogflow)
+- Apache server
+- 
 ## 🏃 Running the App
 
-uvicorn main:app --reload
-
+1. Clone the repository
+2. Install dependencies
+3. Start your backend server :**uvicorn main:app --reload**
+4. Launch ngrok for HTTPS tunneling :**ngrok http 8000**
+5. Update the Dialogflow webhook URL to use the HTTPS link from ngrok
+6. Open the frontend to interact with the chatbot
+   
 ## ngrok for https tunneling
 
 1. To install ngrok, go to https://ngrok.com/download and install ngrok version that is suitable for your OS
